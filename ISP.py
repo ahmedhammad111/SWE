@@ -43,3 +43,17 @@ class OrderService(CreateService, RetrieveService, UpdateService):
     
     def update(self, id, data):
         print("Order was updated")
+
+# Example usage
+if __name__ == "__main__":
+    user_service = UserService()
+    order_service = OrderService()
+
+    user_service.save("User data")
+    user_service.get(123)
+    user_service.update(123, "Updated user data")
+    user_service.delete(123)
+
+    order_service.save("Order data")
+    order_service.get(456)
+    order_service.update(456, "Updated order data")
